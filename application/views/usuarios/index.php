@@ -15,7 +15,20 @@
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $titulo ?></li>
             </ol>
         </nav>
-
+        <!--Apresenta mensagem de sucesso -->
+        <?php if ($message = $this->session->flashdata('sucesso')): ?>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong><i class="fa fa-smile-o" aria-hidden="true"></i>&nbsp;&nbsp;<?php echo $message; ?></strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
+        
         <!--Apresenta mensagem de erro -->
         <?php if ($message = $this->session->flashdata('error')): ?>
             <div class="row">
