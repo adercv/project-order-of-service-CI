@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('Ação não permitida');
 
-class Core extends CI_Model
+class Core_model extends CI_Model
 {
 
     public function get_all($tabela = null, $condicao = null)
